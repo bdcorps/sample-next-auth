@@ -1,5 +1,5 @@
-import DrawerHome from "@/components/drawer";
-import SettingsModal from "@/components/settingsModal";
+import DrawerHome from "../../components/drawer";
+import SettingsModal from "../../components/settingsModal";
 import {
   HStack,
   Box,
