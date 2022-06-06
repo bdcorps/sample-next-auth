@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { signIn, signOut, useSession } from "next-auth/react"
-import { Button, Text } from "@chakra-ui/react"
 
 export default function Header() {
   const { data: session, status } = useSession()
@@ -12,22 +11,30 @@ export default function Header() {
         <p>
           {!session && (
             <>
-              <Text>You are not signed in</Text>
-              <Button
+              <span>You are not signed in</span>
+              <a
+                href={`/api/auth/signin`}
                 onClick={(e) => {
                   e.preventDefault()
                   signIn()
                 }}
               >
                 Sign in
-              </Button>
+              </a>
             </>
           )}
           {session?.user && (
             <>
-              <Text>{`Signed in as ${
-                session.user.email ?? session.user.name
-              }`}</Text>
+              {session.user.image && (
+                <span
+                  style={{ backgroundImage: `url('${session.user.image}')` }}
+                />
+              )}
+              <span>
+                <small>Signed in as</small>
+                <br />
+                <strong>{session.user.email ?? session.user.name}</strong>
+              </span>
               <a
                 href={`/api/auth/signout`}
                 onClick={(e) => {
