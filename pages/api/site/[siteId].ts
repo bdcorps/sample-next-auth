@@ -3,7 +3,7 @@ import prisma from "../../../lib/prisma";
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 
-async function getSite(siteId: string) {
+export async function getSite(siteId: string) {
   const page = await prisma.site.findFirst({ where: { id: siteId }, include: { pages: true } });
 
   return page;
