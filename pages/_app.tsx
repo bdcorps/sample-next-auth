@@ -14,10 +14,10 @@ const theme = extendTheme({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <SessionProvider session={pageProps.session} refetchInterval={0}>
-      <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme}>
+      <SessionProvider session={pageProps.session} refetchInterval={0}>
         <Component {...pageProps} />
-      </ChakraProvider>
-    </SessionProvider>
+      </SessionProvider>
+    </ChakraProvider>
   )
 }
