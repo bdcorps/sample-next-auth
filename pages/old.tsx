@@ -1,5 +1,5 @@
-import DrawerHome from "@/components/drawer";
-import NewSiteModal from "@/components/newSiteModal";
+import DrawerHome from "../components/drawer";
+import NewSiteModal from "../components/newSiteModal";
 import {
   HStack,
   Box,
@@ -11,7 +11,7 @@ import {
   GridItem,
   Text,
 } from "@chakra-ui/react";
-import { getAccount } from "api";
+import { getAccount } from "../api";
 import type { NextPage } from "next";
 import { getSession, signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";

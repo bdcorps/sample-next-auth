@@ -1,7 +1,5 @@
 import Airtable from 'airtable';
-import { getSite } from 'api';
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { table } from 'utils';
 import prisma from "../../../lib/prisma";
 
 const PostRecords = async (req: NextApiRequest, res: NextApiResponse) => {

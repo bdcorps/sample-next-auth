@@ -10,9 +10,9 @@ import {
   Container,
   HStack,
 } from "@chakra-ui/react";
-import { getAllPages, getSite } from "api";
 import { NextPage } from "next";
 import { useState, useEffect } from "react";
+import { getSite, getAllPages } from "../../../api";
 
 // const data: any = {
 //   123: {

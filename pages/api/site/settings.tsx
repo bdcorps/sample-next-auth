@@ -1,4 +1,4 @@
-import { getSite } from "api";
+import { getSite } from "../../../api";
 import type { NextApiRequest, NextApiResponse } from "next";
 import prisma from "../../../lib/prisma";
 

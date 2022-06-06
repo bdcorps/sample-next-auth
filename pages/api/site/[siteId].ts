@@ -1,5 +1,6 @@
-import { getSite } from 'api';
+
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { getSite } from '../../../api';
 
 const GetSite = async (req: NextApiRequest, res: NextApiResponse) => {
   const { siteId } = req.query;

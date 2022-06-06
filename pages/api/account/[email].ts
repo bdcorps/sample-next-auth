@@ -1,5 +1,6 @@
-import { getAccount } from 'api';
+
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { getAccount } from '../../../api';
 
 const GetAccount = async (req: NextApiRequest, res: NextApiResponse) => {
   const { email } = req.query;

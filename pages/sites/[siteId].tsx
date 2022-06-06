@@ -17,7 +17,7 @@ import {
   Divider,
   VStack,
 } from "@chakra-ui/react";
-import { getAccount } from "api";
+import { getAccount } from "../../api";
 import axios from "axios";
 import type { NextPage } from "next";
 import { signIn, signOut, useSession } from "next-auth/react";

@@ -12,11 +12,11 @@ import {
   WrapItem,
   Wrap,
 } from "@chakra-ui/react";
-import { getAllPages, getSite } from "api";
 import { NextPage } from "next";
 import { useSession } from "next-auth/react";
 import Head from "next/head";
 import { useState, useEffect, FunctionComponent } from "react";
+import { getSite, getAllPages } from "../../../api";
 
 // const data: any = {
 //   123: {
