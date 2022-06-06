@@ -1,13 +1,23 @@
+import { ChakraProvider, extendTheme } from "@chakra-ui/react"
 import { SessionProvider } from "next-auth/react"
 import type { AppProps } from "next/app"
+import React from "react"
 import "./styles.css"
 
-// Use of the <SessionProvider> is mandatory to allow components that call
-// `useSession()` anywhere in your application to access the `session` object.
+const theme = extendTheme({
+  brand: {
+    900: "#1a365d",
+    800: "#153e75",
+    700: "#2a69ac",
+  },
+})
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <SessionProvider session={pageProps.session} refetchInterval={0}>
-      <Component {...pageProps} />
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
     </SessionProvider>
   )
 }
