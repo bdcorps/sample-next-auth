@@ -29,7 +29,7 @@ export default function SignIn({ providers }: any) {
                     <Button
                       onClick={() =>
                         signIn(provider.id, {
-                          callbackUrl: `${window.location.origin}`,
+                          callbackUrl: window.location.href,
                         })
                       }
                     >
